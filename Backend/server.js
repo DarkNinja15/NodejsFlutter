@@ -12,4 +12,7 @@ app.get("/notes",function(req,res){
     res.send("This is the notes page.");
 });
 
-app.listen(5000);
+// starting the server
+app.listen(5000,function(){
+    console.log("Server connected at port 5000");
+});
