@@ -15,8 +15,9 @@ app.use(bodyParser.json());
 mongoose.connect(process.env.DB_URI).then(()=>{
     console.log("connected to database");
     app.get("/",function(req,res){
-        const response = {message: "API Works!"};
-        res.json(response);
+        // const response = {message: "API Works!"};
+        // res.json(response);
+        res.send("API Works!");
     });
 
     const noteRouter = require("./routes/noteRoutes");
